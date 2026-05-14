@@ -3,12 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <title>Parvathy | Portfolio</title>
-  <!-- ✅ Connect CSS -->
   <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-  <!-- ✅ Navigation Bar -->
+  <!-- Hero Section -->
+  <header id="hero">
+    <h1>Parvathy Shajikumar</h1>
+    <p>AWS Data Engineer | Databricks Certified</p>
+    <div class="hero-buttons">
+      <a href="resume.pdf" class="btn">Download Resume</a>
+      <a href="https://github.com/ParvathyShajikumar" target="_blank" class="btn">View GitHub</a>
+    </div>
+  </header>
+
+  <!-- Navigation Bar -->
   <nav>
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
@@ -16,57 +27,112 @@
     <a href="#certifications">Certifications</a>
     <a href="#contact">Contact</a>
   </nav>
-<section id="about">
-  <h2>About Me</h2>
-  <p>
-    Hi, I’m Parvathy — an AWS Data Engineer with 4 years of experience 
-    designing and optimizing scalable data pipelines in cloud-native environments. 
-    I specialize in ETL/ELT development using PySpark, pandas, and SQL, with 
-    expertise in AWS Glue, Redshift, S3, and Lambda.
-  </p>
-  <p>
-    Over the years, I’ve contributed to aviation and healthcare projects, 
-    reducing ETL processing times by 20% and improving query performance by 25%. 
-    My focus is on building efficient, automated workflows that enable faster 
-    analytics and reliable business insights.
-  </p>
-  <p>
-    I hold certifications in Databricks (Certified Data Engineer Associate) 
-    and AWS Cloud Practitioner, and I’m currently preparing for Microsoft’s 
-    Agentic AI certification. Looking ahead, I’m excited to move to Germany 
-    to pursue advanced studies and expand my career in data engineering and AI.
-  </p>
-</section>
-<section id="skills">
-  <h2>Skills</h2>
-  <ul>
-    <li><strong>Programming:</strong> SQL, Python, PySpark</li>
-    <li><strong>Cloud Technologies:</strong> AWS Glue, Redshift, S3, Lambda, IAM, Athena, DynamoDB, ECS Fargate, Step Functions, EventBridge</li>
-    <li><strong>Data Engineering:</strong> ETL/ELT Processes, Data Warehouse Design, Big Data, Data Lake Creation, CI/CD pipelines</li>
-    <li><strong>Tools & Frameworks:</strong> Databricks, Jupyter Notebook, PyCharm, VS Code, Jira, SVN, Git/GitHub, Terraform</li>
-    <li><strong>Databases:</strong> PostgreSQL, MySQL</li>
-    <li><strong>Soft Skills:</strong> Problem Solving, Analytical Thinking, Adaptability, Collaboration, Time Management</li>
-  </ul>
-</section>
-<section id="certifications">
-  <h2>Certifications</h2>
-  <ul>
-    <li>Databricks Certified Data Engineer Associate – Databricks</li>
-    <li>AWS Certified Cloud Practitioner – Amazon Web Services</li>
-    <li>Microsoft Agentic AI Certification – In Progress</li>
-  </ul>
-</section>
-<section id="contact">
-  <h2>Contact</h2>
-  <p>You can reach me through the following platforms:</p>
-  <ul>
-    <li><a href="mailto:parumulavana25@gmail.com">Email</a></li>
-    <li><a href="https://github.com/ParvathyShajikumar" target="_blank">GitHub</a></li>
-    <li><a href="https://www.linkedin.com/in/parvathyshajikumar" target="_blank">LinkedIn</a></li>
-    <li><a href="https://www.xing.com/profile/ParvathyShajikumar" target="_blank">Xing</a></li>
-  </ul>
-</section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      Hi, I’m Parvathy — an AWS Data Engineer with 4 years of experience 
+      designing and optimizing scalable data pipelines in cloud-native environments. 
+      I specialize in ETL/ELT development using PySpark, pandas, and SQL, with 
+      expertise in AWS Glue, Redshift, S3, and Lambda.
+    </p>
+    <p>
+      Over the years, I’ve contributed to aviation and healthcare projects, 
+      reducing ETL processing times by 20% and improving query performance by 25%. 
+      My focus is on building efficient, automated workflows that enable faster 
+      analytics and reliable business insights.
+    </p>
+    <p>
+      I hold certifications in Databricks (Certified Data Engineer Associate) 
+      and AWS Cloud Practitioner, and I’m currently preparing for Microsoft’s 
+      Agentic AI certification. Looking ahead, I’m excited to move to Germany 
+      to pursue advanced studies and expand my career in data engineering and AI.
+    </p>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="card-container">
+      <div class="card">
+        <i class="fas fa-code"></i>
+        <h3>Programming</h3>
+        <p>SQL, Python, PySpark</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-cloud"></i>
+        <h3>Cloud</h3>
+        <p>AWS Glue, Redshift, S3, Lambda</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-database"></i>
+        <h3>Databases</h3>
+        <p>PostgreSQL, MySQL</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-tools"></i>
+        <h3>Tools</h3>
+        <p>Databricks, GitHub, Terraform</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="card-container">
+      <div class="card">
+        <h3>IBS Software</h3>
+        <p>Data Engineer (2022–2025)</p>
+        <p>Built ETL pipelines with PySpark & AWS Glue, optimized workflows, and supported aviation analytics.</p>
+      </div>
+      <div class="card">
+        <h3>Cognizant</h3>
+        <p>Associate Data Engineer (2025–Present)</p>
+        <p>Developed scalable healthcare data pipelines, automated ingestion, and improved performance by 75%.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications Section -->
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <div class="card-container">
+      <div class="card">
+        <i class="fas fa-certificate"></i>
+        <h3>Databricks</h3>
+        <p>Certified Data Engineer Associate</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-certificate"></i>
+        <h3>AWS</h3>
+        <p>Certified Cloud Practitioner</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-certificate"></i>
+        <h3>Microsoft</h3>
+        <p>Agentic AI Certification (In Progress)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Let’s connect!</p>
+    <ul>
+      <li><i class="fas fa-envelope"></i> <a href="mailto:parumulavana25@gmail.com">Email</a></li>
+      <li><i class="fab fa-github"></i> <a href="https://github.com/ParvathyShajikumar" target="_blank">GitHub</a></li>
+      <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/parvathyshajikumar" target="_blank">LinkedIn</a></li>
+      <li><i class="fab fa-xing"></i> <a href="https://www.xing.com/profile/ParvathyShajikumar" target="_blank">Xing</a></li>
+    </ul>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Parvathy Shajikumar | Built with ❤️ and AWS</p>
+  </footer>
+
 </body>
 </html>
-
-
