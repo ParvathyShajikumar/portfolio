@@ -231,20 +231,18 @@ section.visible {
   border-color: #00a8a8;
   box-shadow: 0 0 12px rgba(0,168,168,0.7);
 }
+/* Project Buttons Layout */
 .project-buttons {
   display: flex;
   justify-content: center;   /* centers buttons horizontally */
   gap: 15px;                 /* spacing between buttons */
   margin-top: 20px;          /* pushes buttons down from text */
-  flex-wrap: wrap;           /* ensures they don’t overlap if screen is small */
+  flex-wrap: wrap;           /* ensures they stack on small screens */
 }
 
 .project-buttons .btn {
-  flex: 1;                   /* makes buttons equal width if side by side */
-  min-width: 120px;          /* prevents buttons from shrinking too much */
+  flex: 0 1 auto;            /* prevents buttons from stretching too much */
+  min-width: 140px;          /* ensures readability */
   text-align: center;
 }
-
-
-
 
