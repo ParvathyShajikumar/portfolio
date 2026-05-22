@@ -211,4 +211,23 @@ section.visible {
 .carousel-btn.next {
   right: 10px;
 }
+/* Button Styling Fix */
+.btn {
+  background-color: #00a8a8; /* turquoise accent */
+  color: #ffffff;
+  padding: 12px 25px;
+  margin: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  border: 2px solid #00a8a8;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #ffffff;
+  color: #1a3c6e;
+  border-color: #ffffff;
+}
+
 
