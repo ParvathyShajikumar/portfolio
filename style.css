@@ -93,4 +93,39 @@ section.visible {
 .card {
   background-color: #1a3c6e;
   color: #ffffff;
-  padding: 20px
+  padding: 20px;
+  border-radius: 12px;
+  width: 280px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+/* Project Gallery */
+.project-gallery {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.project-gallery img {
+  flex: 0 0 auto;
+  width: 400px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  scroll-snap-align: start;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+}
+
+.project-gallery img:hover {
+  transform: scale(1.05);
+}
