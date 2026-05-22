@@ -212,9 +212,10 @@ section.visible {
   right: 10px;
 }
 /* Button Styling Fix */
+/* High-contrast buttons for project section */
 .btn {
-  background-color: #00a8a8; /* turquoise accent */
-  color: #ffffff;
+  background-color: #ffffff;   /* white base */
+  color: #00a8a8;              /* turquoise text */
   padding: 12px 25px;
   margin: 10px;
   text-decoration: none;
@@ -225,9 +226,11 @@ section.visible {
 }
 
 .btn:hover {
-  background-color: #ffffff;
-  color: #1a3c6e;
-  border-color: #ffffff;
+  background-color: #00a8a8;   /* turquoise hover */
+  color: #ffffff;              /* white text */
+  border-color: #00a8a8;
+  box-shadow: 0 0 12px rgba(0,168,168,0.7);
 }
+
 
 
