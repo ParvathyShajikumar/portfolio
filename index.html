@@ -44,7 +44,6 @@ h1,h2,h3{font-family:var(--font-display);margin:0;letter-spacing:-0.01em;}
   text-transform:uppercase;
   color:var(--slate);
 }
-.hero-eyebrow{color:rgba(246,244,238,0.55);}
 
 /* ---------- Top nav ---------- */
 header.nav{
@@ -63,12 +62,6 @@ header.nav{
   padding:4px 2px;border-bottom:1px solid transparent;transition:.15s;
 }
 .nav-links a:hover{color:var(--ink);border-color:var(--signal);}
-#langToggle{
-  font-family:var(--font-mono);font-size:12px;font-weight:600;
-  border:1px solid var(--line-dark);background:transparent;color:var(--ink);
-  padding:5px 10px;border-radius:6px;cursor:pointer;letter-spacing:.05em;
-}
-#langToggle:hover{background:var(--ink);color:var(--paper);}
 @media(max-width:720px){.nav-links{display:none;}}
 
 /* ---------- Hero ---------- */
@@ -147,14 +140,8 @@ header.nav{
   content:"";position:absolute;inset:-6px;border-radius:50%;
   border:1px solid var(--pipeline);opacity:.4;
 }
-.stage-head{display:flex;align-items:baseline;gap:14px;margin-bottom:22px;flex-wrap:wrap;}
+.stage-head{margin-bottom:22px;}
 .stage-head h2{font-size:26px;font-weight:600;}
-.stage-status{
-  font-family:var(--font-mono);font-size:11px;color:var(--slate-soft);
-  border:1px solid var(--line);padding:3px 9px;border-radius:20px;
-  transition:.4s;
-}
-.stage.visible .stage-status{color:var(--pipeline);border-color:var(--pipeline);}
 
 .lede{color:var(--slate);max-width:640px;margin-bottom:8px;}
 
@@ -216,12 +203,6 @@ footer{
   text-align:center;padding:34px 20px;font-family:var(--font-mono);
   font-size:11.5px;color:var(--slate-soft);border-top:1px solid var(--line);
 }
-
-[data-de]{display:none;}
-body.lang-de [data-en]{display:none;}
-body.lang-de [data-de]{display:inline;}
-body.lang-de [data-de-block]{display:block;}
-body.lang-de .en-only{display:none;}
 </style>
 </head>
 <body>
@@ -229,14 +210,13 @@ body.lang-de .en-only{display:none;}
 <header class="nav">
   <div class="nav-brand">parvathy<span>.</span>s</div>
   <nav class="nav-links">
-    <a href="#about" data-en="About" data-de="Über mich">About</a>
-    <a href="#skills" data-en="Skills" data-de="Skills">Skills</a>
-    <a href="#experience" data-en="Experience" data-de="Erfahrung">Experience</a>
-    <a href="#certifications" data-en="Certifications" data-de="Zertifikate">Certifications</a>
-    <a href="#projects" data-en="Projects" data-de="Projekte">Projects</a>
-    <a href="#contact" data-en="Contact" data-de="Kontakt">Contact</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
   </nav>
-  <button id="langToggle" aria-label="Switch language">DE</button>
 </header>
 
 <section id="hero">
@@ -244,26 +224,22 @@ body.lang-de .en-only{display:none;}
     <div class="terminal-line"><span>$ whoami</span><span class="cursor">▌</span></div>
     <h1>Parvathy S</h1>
     <p class="hero-role">
-      <span data-en="AWS Data Engineer" data-de="AWS Data Engineer">AWS Data Engineer</span>
-      <span class="sep">/</span>
-      <span data-en="GenAI Builder" data-de="GenAI-Entwicklerin">GenAI Builder</span>
-      <span class="sep">/</span>
-      <span data-en="Databricks Certified" data-de="Databricks-zertifiziert">Databricks Certified</span>
+      AWS Data Engineer <span class="sep">/</span> GenAI Builder <span class="sep">/</span> Databricks Certified
     </p>
     <div class="hero-tags">
-      <span class="tag">4+ <span data-en="years experience" data-de="Jahre Erfahrung">years experience</span></span>
+      <span class="tag">4+ years experience</span>
       <span class="tag">PySpark · AWS Glue · Redshift</span>
-      <span class="tag relocate"><i class="fa-solid fa-arrow-right-long" style="font-size:10px;"></i> <span data-en="Relocating to Germany" data-de="Umzug nach Deutschland geplant">Relocating to Germany</span></span>
+      <span class="tag relocate"><i class="fa-solid fa-arrow-right-long" style="font-size:10px;"></i> Relocating to Germany</span>
     </div>
     <div class="hero-buttons">
-      <a href="Resume.pdf" class="btn primary"><i class="fa-solid fa-download"></i> <span data-en="Download Resume" data-de="Lebenslauf herunterladen">Download Resume</span></a>
+      <a href="Resume.pdf" class="btn primary"><i class="fa-solid fa-download"></i> Download Resume</a>
       <a href="https://github.com/ParvathyShajikumar" target="_blank" class="btn ghost"><i class="fa-brands fa-github"></i> View GitHub</a>
     </div>
     <div class="stat-strip">
-      <div class="stat"><div class="num">4</div><div class="lbl" data-en="Years in data eng" data-de="Jahre Erfahrung">Years in data eng</div></div>
-      <div class="stat"><div class="num">20%</div><div class="lbl" data-en="Faster ETL runtime" data-de="Schnellere ETL-Laufzeit">Faster ETL runtime</div></div>
-      <div class="stat"><div class="num">25%</div><div class="lbl" data-en="Better query perf." data-de="Bessere Query-Performance">Better query perf.</div></div>
-      <div class="stat"><div class="num">75%</div><div class="lbl" data-en="Ingestion speed-up" data-de="Schnellere Ingestion">Ingestion speed-up</div></div>
+      <div class="stat"><div class="num">4</div><div class="lbl">Years in data eng</div></div>
+      <div class="stat"><div class="num">20%</div><div class="lbl">Faster ETL runtime</div></div>
+      <div class="stat"><div class="num">25%</div><div class="lbl">Better query perf.</div></div>
+      <div class="stat"><div class="num">75%</div><div class="lbl">Ingestion speed-up</div></div>
     </div>
   </div>
 </section>
@@ -272,83 +248,59 @@ body.lang-de .en-only{display:none;}
 
   <section id="about" class="stage">
     <div class="node"></div>
-    <div class="stage-head">
-      <h2 data-en="About" data-de="Über mich">About</h2>
-      <span class="stage-status" data-en="stage: extract" data-de="Phase: Extract">stage: extract</span>
-    </div>
-    <p class="lede" data-en="Hi, I'm Parvathy — an AWS Data Engineer with 4 years of experience designing and optimizing scalable data pipelines in cloud-native environments. I specialize in ETL/ELT development using PySpark, pandas, and SQL, with expertise in AWS Glue, Redshift, S3, and Lambda."
-       data-de="Hallo, ich bin Parvathy — AWS Data Engineer mit 4 Jahren Erfahrung im Design und der Optimierung skalierbarer Datenpipelines in Cloud-nativen Umgebungen. Mein Schwerpunkt liegt auf ETL/ELT-Entwicklung mit PySpark, pandas und SQL sowie AWS Glue, Redshift, S3 und Lambda.">
+    <div class="stage-head"><h2>About</h2></div>
+    <p class="lede">
       Hi, I'm Parvathy — an AWS Data Engineer with 4 years of experience designing and optimizing scalable data pipelines in cloud-native environments. I specialize in ETL/ELT development using PySpark, pandas, and SQL, with expertise in AWS Glue, Redshift, S3, and Lambda.
     </p>
-    <p class="lede" data-en="Over the years, I've contributed to aviation and healthcare projects, reducing ETL processing times by 20% and improving query performance by 25%. My focus is on building efficient, automated workflows that enable faster analytics and reliable business insights."
-       data-de="Ich habe an Projekten in der Luftfahrt- und Gesundheitsbranche mitgewirkt, ETL-Laufzeiten um 20% reduziert und die Query-Performance um 25% verbessert. Mein Fokus liegt auf effizienten, automatisierten Workflows für schnellere Analysen und verlässliche Business-Insights.">
+    <p class="lede">
       Over the years, I've contributed to aviation and healthcare projects, reducing ETL processing times by 20% and improving query performance by 25%. My focus is on building efficient, automated workflows that enable faster analytics and reliable business insights.
     </p>
-    <p class="lede" data-en="I hold certifications in Databricks (Certified Data Engineer Associate) and AWS Cloud Practitioner, and I'm currently preparing for Microsoft's Agentic AI certification. I'm now looking to relocate to Germany to pursue advanced studies and grow my career in data engineering and AI."
-       data-de="Ich bin als Databricks Certified Data Engineer Associate und AWS Certified Cloud Practitioner zertifiziert und bereite derzeit die Agentic-AI-Zertifizierung von Microsoft vor. Ich plane den Umzug nach Deutschland, um mich in Data Engineering und KI weiterzuentwickeln.">
+    <p class="lede">
       I hold certifications in Databricks (Certified Data Engineer Associate) and AWS Cloud Practitioner, and I'm currently preparing for Microsoft's Agentic AI certification. I'm now looking to relocate to Germany to pursue advanced studies and grow my career in data engineering and AI.
     </p>
   </section>
 
   <section id="skills" class="stage">
     <div class="node"></div>
-    <div class="stage-head">
-      <h2 data-en="Skills" data-de="Skills">Skills</h2>
-      <span class="stage-status" data-en="stage: transform" data-de="Phase: Transform">stage: transform</span>
-    </div>
+    <div class="stage-head"><h2>Skills</h2></div>
     <div class="grid">
-      <div class="card"><i class="fa-solid fa-code fa-icon"></i><h3 data-en="Programming" data-de="Programmierung">Programming</h3><p>SQL, Python, PySpark</p></div>
-      <div class="card"><i class="fa-solid fa-cloud fa-icon"></i><h3 data-en="Cloud" data-de="Cloud">Cloud</h3><p>AWS Glue, Redshift, S3, Lambda</p></div>
-      <div class="card"><i class="fa-solid fa-database fa-icon"></i><h3 data-en="Databases" data-de="Datenbanken">Databases</h3><p>PostgreSQL, MySQL</p></div>
-      <div class="card"><i class="fa-solid fa-toolbox fa-icon"></i><h3 data-en="Tools" data-de="Tools">Tools</h3><p>Databricks, GitHub, Terraform</p></div>
+      <div class="card"><i class="fa-solid fa-code fa-icon"></i><h3>Programming</h3><p>SQL, Python, PySpark</p></div>
+      <div class="card"><i class="fa-solid fa-cloud fa-icon"></i><h3>Cloud</h3><p>AWS Glue, Redshift, S3, Lambda</p></div>
+      <div class="card"><i class="fa-solid fa-database fa-icon"></i><h3>Databases</h3><p>PostgreSQL, MySQL</p></div>
+      <div class="card"><i class="fa-solid fa-toolbox fa-icon"></i><h3>Tools</h3><p>Databricks, GitHub, Terraform</p></div>
     </div>
   </section>
 
   <section id="experience" class="stage">
     <div class="node"></div>
-    <div class="stage-head">
-      <h2 data-en="Experience" data-de="Erfahrung">Experience</h2>
-      <span class="stage-status" data-en="stage: load" data-de="Phase: Load">stage: load</span>
-    </div>
+    <div class="stage-head"><h2>Experience</h2></div>
     <div class="grid">
       <div class="card">
         <span class="period">2022 – 2025</span>
         <h3>IBS Software</h3>
-        <p data-en="Data Engineer — built ETL pipelines with PySpark &amp; AWS Glue, optimized workflows, and supported aviation analytics."
-           data-de="Data Engineer — ETL-Pipelines mit PySpark &amp; AWS Glue entwickelt, Workflows optimiert und Aviation-Analytics unterstützt.">
-          Data Engineer — built ETL pipelines with PySpark &amp; AWS Glue, optimized workflows, and supported aviation analytics.
-        </p>
+        <p>Data Engineer — built ETL pipelines with PySpark &amp; AWS Glue, optimized workflows, and supported aviation analytics.</p>
       </div>
       <div class="card">
-        <span class="period" data-en="2025 – Present" data-de="2025 – heute">2025 – Present</span>
+        <span class="period">2025 – Present</span>
         <h3>Cognizant</h3>
-        <p data-en="Associate Data Engineer — developed scalable healthcare data pipelines, automated ingestion, and improved performance by 75%."
-           data-de="Associate Data Engineer — skalierbare Healthcare-Datenpipelines entwickelt, Ingestion automatisiert und Performance um 75% verbessert.">
-          Associate Data Engineer — developed scalable healthcare data pipelines, automated ingestion, and improved performance by 75%.
-        </p>
+        <p>Associate Data Engineer — developed scalable healthcare data pipelines, automated ingestion, and improved performance by 75%.</p>
       </div>
     </div>
   </section>
 
   <section id="certifications" class="stage">
     <div class="node"></div>
-    <div class="stage-head">
-      <h2 data-en="Certifications" data-de="Zertifikate">Certifications</h2>
-      <span class="stage-status" data-en="stage: validate" data-de="Phase: Validate">stage: validate</span>
-    </div>
+    <div class="stage-head"><h2>Certifications</h2></div>
     <div class="grid">
       <div class="card cert-badge"><i class="fa-solid fa-certificate"></i><div><h3>Databricks</h3><p>Certified Data Engineer Associate</p></div></div>
-      <div class="card cert-badge"><i class="fa-solid fa-certificate"></i><div><h3>AWS</h3><p data-en="Certified Cloud Practitioner" data-de="Certified Cloud Practitioner">Certified Cloud Practitioner</p></div></div>
-      <div class="card cert-badge"><i class="fa-solid fa-certificate"></i><div><h3>Microsoft</h3><p data-en="Agentic AI Certification (In Progress)" data-de="Agentic-AI-Zertifizierung (laufend)">Agentic AI Certification (In Progress)</p></div></div>
+      <div class="card cert-badge"><i class="fa-solid fa-certificate"></i><div><h3>AWS</h3><p>Certified Cloud Practitioner</p></div></div>
+      <div class="card cert-badge"><i class="fa-solid fa-certificate"></i><div><h3>Microsoft</h3><p>Agentic AI Certification (In Progress)</p></div></div>
     </div>
   </section>
 
   <section id="projects" class="stage">
     <div class="node"></div>
-    <div class="stage-head">
-      <h2 data-en="Projects" data-de="Projekte">Projects</h2>
-      <span class="stage-status" data-en="stage: deploy" data-de="Phase: Deploy">stage: deploy</span>
-    </div>
+    <div class="stage-head"><h2>Projects</h2></div>
     <div class="grid">
 
       <div class="project-card">
@@ -369,16 +321,6 @@ body.lang-de .en-only{display:none;}
         </div>
       </div>
 
-      <div class="project-card">
-        <h3>Job Application Tracker Assistant</h3>
-        <p class="desc">Automates job tracking by parsing emails, updating statuses, and generating weekly dashboards.</p>
-        <div class="stack-row"><b>Stack:</b> Python · SQLite · Streamlit · Gmail API</div>
-        <div class="project-buttons">
-          <a href="Job Application Tracker Assistant.pptx" download><i class="fa-solid fa-download"></i> Download PPT</a>
-          <a href="https://github.com/ParvathyShajikumar/job-tracker-assistant" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
-        </div>
-      </div>
-
       <div class="carousel-wrap">
         <div class="carousel-container">
           <button class="carousel-btn prev" aria-label="Previous">&#10094;</button>
@@ -387,9 +329,6 @@ body.lang-de .en-only{display:none;}
               <div class="carousel-slide"><img src="images/fraud_dashboard.jpeg" alt="Fraud Dashboard"><p class="caption">Insurance Fraud Detection Dashboard</p></div>
               <div class="carousel-slide"><img src="images/fraud_analysis.jpeg" alt="Fraud Analysis"><p class="caption">AI Duplicate Claim Analysis</p></div>
               <div class="carousel-slide"><img src="images/fraud_indicators.jpeg" alt="Fraud Indicators"><p class="caption">AI Fraud Indicators &amp; Recommendations</p></div>
-              <div class="carousel-slide"><img src="images/dashboard.png" alt="Dashboard Screenshot"><p class="caption">Dashboard Overview</p></div>
-              <div class="carousel-slide"><img src="images/timeline.png" alt="Applications Timeline"><p class="caption">Applications Timeline</p></div>
-              <div class="carousel-slide"><img src="images/company_role.png" alt="Applications by Company and Role"><p class="caption">Company &amp; Role Insights</p></div>
             </div>
           </div>
           <button class="carousel-btn next" aria-label="Next">&#10095;</button>
@@ -401,11 +340,8 @@ body.lang-de .en-only{display:none;}
 
   <section id="contact" class="stage">
     <div class="node"></div>
-    <div class="stage-head">
-      <h2 data-en="Contact" data-de="Kontakt">Contact</h2>
-      <span class="stage-status" data-en="stage: connect" data-de="Phase: Connect">stage: connect</span>
-    </div>
-    <p class="lede" data-en="Let's connect — happy to talk about roles, relocation timelines, or the projects above." data-de="Lass uns verbinden — gerne über Positionen, Umzugstermine oder die Projekte oben sprechen.">Let's connect — happy to talk about roles, relocation timelines, or the projects above.</p>
+    <div class="stage-head"><h2>Contact</h2></div>
+    <p class="lede">Let's connect — happy to talk about roles, relocation timelines, or the projects above.</p>
     <div class="contact-grid">
       <a class="contact-pill" href="mailto:parumulavana25@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a>
       <a class="contact-pill" href="https://github.com/ParvathyShajikumar" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
@@ -416,7 +352,7 @@ body.lang-de .en-only{display:none;}
 
 </div>
 
-<footer>© 2026 Parvathy S · <span data-en="built with AWS, PySpark and a little GenAI" data-de="gebaut mit AWS, PySpark und etwas GenAI">built with AWS, PySpark and a little GenAI</span></footer>
+<footer>© 2026 Parvathy S · built with AWS, PySpark and a little GenAI</footer>
 
 <script>
 const stages = document.querySelectorAll('.stage');
@@ -433,13 +369,6 @@ let idx = 0;
 function update(){ track.style.transform = `translateX(-${idx*100}%)`; }
 prevBtn.addEventListener('click', ()=>{ idx = (idx===0)? slides.length-1 : idx-1; update(); });
 nextBtn.addEventListener('click', ()=>{ idx = (idx===slides.length-1)? 0 : idx+1; update(); });
-
-const langBtn = document.getElementById('langToggle');
-langBtn.addEventListener('click', ()=>{
-  const isDe = document.body.classList.toggle('lang-de');
-  langBtn.textContent = isDe ? 'EN' : 'DE';
-  document.documentElement.lang = isDe ? 'de' : 'en';
-});
 </script>
 
 </body>
