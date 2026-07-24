@@ -256,7 +256,7 @@ footer{
       Over the years, I've contributed to aviation and healthcare projects, reducing ETL processing times by 20% and improving query performance by 25%. My focus is on building efficient, automated workflows that enable faster analytics and reliable business insights.
     </p>
     <p class="lede">
-      I hold certifications in Databricks (Certified Data Engineer Associate) and AWS Cloud Practitioner, and I'm currently preparing for Databricks Certified Generative AI Engineering Associate certification. I'm now looking to relocate to Germany to pursue advanced studies and grow my career in data engineering and AI.
+      I hold certifications in Databricks (Certified Data Engineer Associate) and AWS Cloud Practitioner, and I'm currently preparing for Microsoft's Agentic AI certification. I'm now looking to relocate to Germany to pursue advanced studies and grow my career in data engineering and AI.
     </p>
   </section>
 
@@ -294,7 +294,7 @@ footer{
     <div class="grid">
       <div class="card cert-badge"><i class="fa-solid fa-certificate"></i><div><h3>Databricks</h3><p>Certified Data Engineer Associate</p></div></div>
       <div class="card cert-badge"><i class="fa-solid fa-certificate"></i><div><h3>AWS</h3><p>Certified Cloud Practitioner</p></div></div>
-      <div class="card cert-badge"><i class="fa-solid fa-certificate"></i><div><h3>Databricks</h3><p>Databricks Certified Generative AI Engineering Associate (In Progress)</p></div></div>
+      <div class="card cert-badge"><i class="fa-solid fa-certificate"></i><div><h3>Microsoft</h3><p>Agentic AI Certification (In Progress)</p></div></div>
     </div>
   </section>
 
@@ -324,6 +324,21 @@ footer{
         </div>
       </div>
 
+      <div class="carousel-wrap">
+        <div class="carousel-container">
+          <button class="carousel-btn prev" data-target="queryiq" aria-label="Previous">&#10094;</button>
+          <div class="carousel-track-outer">
+            <div class="carousel-track" id="queryiq-track">
+              <div class="carousel-slide"><img src="images/queryiq_landing.jpeg" alt="QueryIQ landing screen"><p class="caption">QueryIQ — ask a question about your data</p></div>
+              <div class="carousel-slide"><img src="images/queryiq_sql.jpeg" alt="QueryIQ generated SQL"><p class="caption">Natural language converted to SQL</p></div>
+              <div class="carousel-slide"><img src="images/queryiq_results.jpeg" alt="QueryIQ query results and insights"><p class="caption">Query results with generated insights</p></div>
+              <div class="carousel-slide"><img src="images/queryiq_chart.jpeg" alt="QueryIQ Plotly visualization"><p class="caption">Interactive Plotly visualization</p></div>
+            </div>
+          </div>
+          <button class="carousel-btn next" data-target="queryiq" aria-label="Next">&#10095;</button>
+        </div>
+      </div>
+
       <div class="project-card">
         <h3>GenAI-Powered Insurance Claim Fraud Detection System</h3>
         <p class="desc">
@@ -344,15 +359,15 @@ footer{
 
       <div class="carousel-wrap">
         <div class="carousel-container">
-          <button class="carousel-btn prev" aria-label="Previous">&#10094;</button>
+          <button class="carousel-btn prev" data-target="fraud" aria-label="Previous">&#10094;</button>
           <div class="carousel-track-outer">
-            <div class="carousel-track">
+            <div class="carousel-track" id="fraud-track">
               <div class="carousel-slide"><img src="images/fraud_dashboard.jpeg" alt="Fraud Dashboard"><p class="caption">Insurance Fraud Detection Dashboard</p></div>
               <div class="carousel-slide"><img src="images/fraud_analysis.jpeg" alt="Fraud Analysis"><p class="caption">AI Duplicate Claim Analysis</p></div>
               <div class="carousel-slide"><img src="images/fraud_indicators.jpeg" alt="Fraud Indicators"><p class="caption">AI Fraud Indicators &amp; Recommendations</p></div>
             </div>
           </div>
-          <button class="carousel-btn next" aria-label="Next">&#10095;</button>
+          <button class="carousel-btn next" data-target="fraud" aria-label="Next">&#10095;</button>
         </div>
       </div>
 
@@ -382,14 +397,16 @@ const io = new IntersectionObserver((entries)=>{
 },{threshold:0.15});
 stages.forEach(s=>io.observe(s));
 
-const track = document.querySelector('.carousel-track');
-const slides = Array.from(track.children);
-const prevBtn = document.querySelector('.carousel-btn.prev');
-const nextBtn = document.querySelector('.carousel-btn.next');
-let idx = 0;
-function update(){ track.style.transform = `translateX(-${idx*100}%)`; }
-prevBtn.addEventListener('click', ()=>{ idx = (idx===0)? slides.length-1 : idx-1; update(); });
-nextBtn.addEventListener('click', ()=>{ idx = (idx===slides.length-1)? 0 : idx+1; update(); });
+document.querySelectorAll('.carousel-container').forEach(container=>{
+  const track = container.querySelector('.carousel-track');
+  const slides = Array.from(track.children);
+  const prevBtn = container.querySelector('.carousel-btn.prev');
+  const nextBtn = container.querySelector('.carousel-btn.next');
+  let idx = 0;
+  function update(){ track.style.transform = `translateX(-${idx*100}%)`; }
+  prevBtn.addEventListener('click', ()=>{ idx = (idx===0)? slides.length-1 : idx-1; update(); });
+  nextBtn.addEventListener('click', ()=>{ idx = (idx===slides.length-1)? 0 : idx+1; update(); });
+});
 </script>
 
 </body>
