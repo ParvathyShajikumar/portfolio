@@ -306,6 +306,39 @@ footer{
     <div class="grid">
 
       <div class="project-card">
+        <h3>schema-drift-guard — Data Contract Enforcement System</h3>
+        <p class="desc">
+          A CI/CD enforcement tool that catches breaking schema changes between data contract versions before they reach production. Built on the Open Data Contract Standard (ODCS), it compares old and new contract versions, classifies changes as safe or breaking, blocks pull requests via a GitHub Actions gate, and alerts affected teams over Slack automatically.
+        </p>
+        <ul class="feature-list">
+          <li>ODCS-based data contract versioning</li>
+          <li>Field-level compatibility diffing</li>
+          <li>Breaking vs. non-breaking classification</li>
+          <li>CLI and FastAPI interfaces</li>
+          <li>GitHub Actions CI enforcement gate</li>
+          <li>Automated Slack breaking-change alerts</li>
+        </ul>
+        <div class="stack-row"><b>Stack:</b> Python · FastAPI · PyYAML · GitHub Actions · Slack Webhooks</div>
+        <div class="project-buttons">
+          <a href="https://github.com/ParvathyShajikumar/schema-drift-guard" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+        </div>
+      </div>
+
+      <div class="carousel-wrap">
+        <div class="carousel-container">
+          <button class="carousel-btn prev" data-target="sdg" aria-label="Previous">&#10094;</button>
+          <div class="carousel-track-outer">
+            <div class="carousel-track" id="sdg-track">
+              <div class="carousel-slide"><img src="images/sdg_pr_blocked.jpeg" alt="Pull request blocked by failing required check"><p class="caption">Merge blocked — required check has not passed</p></div>
+              <div class="carousel-slide"><img src="images/sdg_action_fail.jpeg" alt="GitHub Action blocking a breaking schema change"><p class="caption">CI detects the breaking change, exit code 1</p></div>
+              <div class="carousel-slide"><img src="images/sdg_slack_alert.jpeg" alt="Slack breaking change alert"><p class="caption">Automated Slack alert with removed fields and type changes</p></div>
+            </div>
+          </div>
+          <button class="carousel-btn next" data-target="sdg" aria-label="Next">&#10095;</button>
+        </div>
+      </div>
+
+      <div class="project-card">
         <h3>QueryIQ — AI-Powered Conversational Analytics Agent</h3>
         <p class="desc">
           A conversational analytics platform that lets users query structured data using natural language. Powered by Claude Sonnet 5, it translates business questions into SQL, runs them against a SQLite database, and presents insights through interactive visualizations and downloadable reports — removing the dependency on technical teams to write SQL and generate reports.
